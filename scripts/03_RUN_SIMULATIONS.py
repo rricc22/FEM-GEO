@@ -6,11 +6,11 @@ import shutil
 import subprocess
 from pathlib import Path
 
-def run_all_simulations(base_dir='fem_cases', mesh_base_dir='elmer_mesh/geometries'):
+def run_all_simulations(base_dir='fem_cases', mesh_dir='elmer_mesh'):
     """Run ElmerSolver for all cases in manifest"""
 
     base_path = Path(base_dir)
-    mesh_base = Path(mesh_base_dir)
+    mesh_path = Path(mesh_dir)
 
     # Load manifest
     manifest_path = base_path / 'manifest.json'
@@ -22,34 +22,20 @@ def run_all_simulations(base_dir='fem_cases', mesh_base_dir='elmer_mesh/geometri
 
     print("="*60)
     print(f"Running ElmerSolver on {len(manifest['cases'])} cases")
-    print(f"  {manifest['n_geometries']} geometries × {manifest['n_process_params']} process params")
     print("="*60)
 
     for i, case_info in enumerate(manifest['cases'], 1):
         case_id = case_info['case_id']
         case_dir = Path(case_info['case_dir'])
-        geometry_id = case_info['geometry_id']
-        geometry_name = case_info['geometry_name']
         split = case_info.get('split', 'train')
 
-        marker = "🧪" if split == 'extrapolation_test' else "✓"
-        print(f"\n{marker} [{i}/{len(manifest['cases'])}] {case_id}: {geometry_name} ({split})")
-
-        # Find geometry mesh directory
-        geom_mesh_dir = mesh_base / f"{geometry_id}_{geometry_name}"
-
-        if not geom_mesh_dir.exists():
-            print(f"  ✗ Mesh directory not found: {geom_mesh_dir}")
-            continue
+        print(f"\n[{i}/{len(manifest['cases'])}] {case_id} ({split})")
 
         # Copy mesh files
-        print(f"  Copying mesh from {geometry_id}...")
+        print("  Copying mesh files...")
         for mesh_file in mesh_files:
-            src = geom_mesh_dir / mesh_file
+            src = mesh_path / mesh_file
             dst = case_dir / mesh_file
-            if not src.exists():
-                print(f"  ✗ Missing mesh file: {mesh_file}")
-                continue
             shutil.copy2(src, dst)
 
         # Run ElmerSolver
@@ -83,8 +69,9 @@ def run_all_simulations(base_dir='fem_cases', mesh_base_dir='elmer_mesh/geometri
 
 if __name__ == '__main__':
     # Use absolute paths
-    project_root = Path(__file__).parent.parent
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
     run_all_simulations(
-        base_dir=project_root / 'fem_cases',
-        mesh_base_dir=project_root / 'elmer_mesh' / 'geometries'
+        base_dir=script_dir / 'fem_cases',
+        mesh_dir=project_root / 'elmer_mesh'
     )

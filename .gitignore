@@ -2,10 +2,8 @@
 Archives/
 elmer_mesh/
 saves/
-fem_cases/
-
-# Generated CAD files (can be regenerated from scripts)
-CAD/geometries/
+wandb/
+scripts/fem_cases/
 
 # Python
 __pycache__/
@@ -26,17 +24,3 @@ venv/
 .idea/
 *.swp
 *.swo
-
-# Model weights (large binary files)
-*.pt
-*.pth
-*.ckpt
-
-# NPZ data files
-*.npz
-
-# VTU result files
-*.vtu
-
-# Elmer result files
-*.result
