@@ -1,0 +1,42 @@
+# Generated data and heavy directories
+Archives/
+elmer_mesh/
+saves/
+fem_cases/
+
+# Generated CAD files (can be regenerated from scripts)
+CAD/geometries/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model weights (large binary files)
+*.pt
+*.pth
+*.ckpt
+
+# NPZ data files
+*.npz
+
+# VTU result files
+*.vtu
+
+# Elmer result files
+*.result
