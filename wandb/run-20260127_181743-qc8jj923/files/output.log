@@ -1,0 +1,85 @@
+Loading training data...
+Training data: 7,247,250 points
+  Coords: (7247250, 3)
+  Process params: heat_flux=(7247250, 1), T_initial=(7247250, 1)
+  Geometry params: L1=(7247250, 1), L2=(7247250, 1), H=(7247250, 1), thickness=(7247250, 1)
+  Geometry features: volume=(7247250, 1), surface_area=(7247250, 1), S_V_ratio=(7247250, 1)
+
+Input shape: (7247250, 13) (13 features)
+  Spatial: x, y, z (3)
+  Temporal: t (1)
+  Process: heat_flux, T_initial (2)
+  Geometry: L1, L2, H, thickness, volume, surface_area, S_V_ratio (7)
+Training on cpu
+[1/100] Data: 1.3742e-02 | Phys: 1.4473e-03 | Val: 1.2662e-02
+[2/100] Data: 1.1650e-02 | Phys: 1.5626e-03 | Val: 1.1069e-02
+[3/100] Data: 9.8087e-03 | Phys: 1.8727e-03 | Val: 7.1058e-03
+[4/100] Data: 5.5238e-03 | Phys: 2.7273e-03 | Val: 4.0743e-03
+[5/100] Data: 3.3921e-03 | Phys: 3.1266e-03 | Val: 3.2377e-03
+[6/100] Data: 2.8886e-03 | Phys: 3.1658e-03 | Val: 3.1600e-03
+[7/100] Data: 2.6763e-03 | Phys: 3.2029e-03 | Val: 2.4617e-03
+[8/100] Data: 2.5493e-03 | Phys: 3.2212e-03 | Val: 3.3274e-03
+[9/100] Data: 2.5114e-03 | Phys: 3.2150e-03 | Val: 2.2906e-03
+[10/100] Data: 2.5212e-03 | Phys: 3.2070e-03 | Val: 2.3245e-03
+[11/100] Data: 2.3000e-03 | Phys: 3.2288e-03 | Val: 2.1422e-03
+[12/100] Data: 2.2744e-03 | Phys: 3.2313e-03 | Val: 3.8049e-03
+[13/100] Data: 2.2302e-03 | Phys: 3.2407e-03 | Val: 3.3309e-03
+[14/100] Data: 2.2707e-03 | Phys: 3.2381e-03 | Val: 2.0047e-03
+[15/100] Data: 2.1450e-03 | Phys: 3.2600e-03 | Val: 2.0843e-03
+[16/100] Data: 2.0993e-03 | Phys: 3.2727e-03 | Val: 2.7568e-03
+[17/100] Data: 2.1299e-03 | Phys: 3.2692e-03 | Val: 2.0408e-03
+[18/100] Data: 2.1289e-03 | Phys: 3.2704e-03 | Val: 1.9220e-03
+[19/100] Data: 2.0866e-03 | Phys: 3.2779e-03 | Val: 1.9841e-03
+[20/100] Data: 2.0179e-03 | Phys: 3.2917e-03 | Val: 2.9935e-03
+Traceback (most recent call last):
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 216, in <module>
+    train()
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 175, in train
+    loss_phys = physics_loss(model, inputs, alpha=config['alpha'])
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 20, in physics_loss
+    T = model(inputs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/Documents/FEM-GEO/src/pinn_arch.py", line 22, in forward
+    return self.net(inputs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 216, in <module>
+    train()
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 175, in train
+    loss_phys = physics_loss(model, inputs, alpha=config['alpha'])
+  File "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py", line 20, in physics_loss
+    T = model(inputs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/Documents/FEM-GEO/src/pinn_arch.py", line 22, in forward
+    return self.net(inputs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/riccardo/miniconda3/envs/ai_general/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

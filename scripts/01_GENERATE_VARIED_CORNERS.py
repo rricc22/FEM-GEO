@@ -45,117 +45,117 @@ def generate_geometry_set():
     # 1. Ultra-thin (sheet metal - heats VERY fast)
     geometries.append({
         'name': 'ultra_thin',
-        'L1': 100, 'L2': 100, 'H': 100, 'thickness': 3,
-        'description': 'Ultra-thin sheet metal (3mm)'
+        'L1': 30, 'L2': 30, 'H': 30, 'thickness': 1,
+        'description': 'Ultra-thin sheet metal (1mm)'
     })
 
     geometries.append({
         'name': 'very_thin',
-        'L1': 80, 'L2': 120, 'H': 100, 'thickness': 4,
-        'description': 'Very thin asymmetric (4mm)'
+        'L1': 25, 'L2': 35, 'H': 30, 'thickness': 1.5,
+        'description': 'Very thin asymmetric (1.5mm)'
     })
 
     # 2. Thin (typical sheet metal)
     geometries.append({
         'name': 'thin_small',
-        'L1': 60, 'L2': 60, 'H': 80, 'thickness': 5,
-        'description': 'Thin small bracket (5mm)'
+        'L1': 20, 'L2': 20, 'H': 25, 'thickness': 2,
+        'description': 'Thin small bracket (2mm)'
     })
 
     geometries.append({
         'name': 'thin_medium',
-        'L1': 100, 'L2': 100, 'H': 100, 'thickness': 6,
-        'description': 'Thin medium bracket (6mm)'
+        'L1': 30, 'L2': 30, 'H': 30, 'thickness': 2,
+        'description': 'Thin medium bracket (2mm)'
     })
 
     # 3. Medium thickness (standard)
     geometries.append({
         'name': 'medium_symmetric',
-        'L1': 100, 'L2': 100, 'H': 100, 'thickness': 10,
-        'description': 'Medium symmetric baseline (10mm)'
+        'L1': 30, 'L2': 30, 'H': 30, 'thickness': 3,
+        'description': 'Medium symmetric baseline (3mm)'
     })
 
     geometries.append({
         'name': 'medium_asymmetric',
-        'L1': 80, 'L2': 120, 'H': 100, 'thickness': 12,
-        'description': 'Medium asymmetric (12mm)'
+        'L1': 25, 'L2': 35, 'H': 30, 'thickness': 3.5,
+        'description': 'Medium asymmetric (3.5mm)'
     })
 
     # 4. Thick (heavy duty)
     geometries.append({
         'name': 'thick_compact',
-        'L1': 100, 'L2': 100, 'H': 100, 'thickness': 18,
-        'description': 'Thick compact bracket (18mm)'
+        'L1': 30, 'L2': 30, 'H': 30, 'thickness': 5,
+        'description': 'Thick compact bracket (5mm)'
     })
 
     geometries.append({
         'name': 'thick_large',
-        'L1': 140, 'L2': 140, 'H': 120, 'thickness': 20,
-        'description': 'Thick large bracket (20mm)'
+        'L1': 40, 'L2': 40, 'H': 35, 'thickness': 6,
+        'description': 'Thick large bracket (6mm)'
     })
 
     # 5. Very thick (extreme - massive heat sink)
     geometries.append({
         'name': 'very_thick',
-        'L1': 100, 'L2': 100, 'H': 100, 'thickness': 25,
-        'description': 'Very thick (25mm) - slow heating'
+        'L1': 30, 'L2': 30, 'H': 30, 'thickness': 7,
+        'description': 'Very thick (7mm) - slow heating'
     })
 
     geometries.append({
         'name': 'ultra_thick',
-        'L1': 120, 'L2': 120, 'H': 100, 'thickness': 30,
-        'description': 'Ultra-thick (30mm) - extreme heat sink'
+        'L1': 35, 'L2': 35, 'H': 30, 'thickness': 8,
+        'description': 'Ultra-thick (8mm) - extreme heat sink'
     })
 
     # 6. Edge case: tall thin
     geometries.append({
         'name': 'tall_thin',
-        'L1': 60, 'L2': 60, 'H': 150, 'thickness': 5,
+        'L1': 20, 'L2': 20, 'H': 45, 'thickness': 2,
         'description': 'Tall and thin - high aspect ratio'
     })
 
     # 7. Edge case: short thick
     geometries.append({
         'name': 'short_thick',
-        'L1': 80, 'L2': 80, 'H': 60, 'thickness': 22,
+        'L1': 25, 'L2': 25, 'H': 20, 'thickness': 6,
         'description': 'Short and thick - compact mass'
     })
 
     # 8. Extreme asymmetry - SHORT + LONG combinations
     geometries.append({
         'name': 'extreme_asym_1',
-        'L1': 40, 'L2': 150, 'H': 100, 'thickness': 8,
+        'L1': 15, 'L2': 45, 'H': 30, 'thickness': 2.5,
         'description': 'Extreme asymmetric: very short + very long'
     })
 
     geometries.append({
         'name': 'extreme_asym_2',
-        'L1': 50, 'L2': 140, 'H': 100, 'thickness': 10,
+        'L1': 18, 'L2': 42, 'H': 30, 'thickness': 3,
         'description': 'High asymmetry: short + long'
     })
 
     geometries.append({
         'name': 'extreme_asym_3',
-        'L1': 60, 'L2': 130, 'H': 100, 'thickness': 12,
+        'L1': 20, 'L2': 40, 'H': 30, 'thickness': 3.5,
         'description': 'Strong asymmetry: medium + long'
     })
 
     geometries.append({
         'name': 'extreme_asym_thin',
-        'L1': 40, 'L2': 120, 'H': 80, 'thickness': 5,
+        'L1': 15, 'L2': 35, 'H': 25, 'thickness': 2,
         'description': 'Asymmetric + thin: short leg heats fast'
     })
 
     geometries.append({
         'name': 'extreme_asym_thick',
-        'L1': 50, 'L2': 130, 'H': 100, 'thickness': 20,
+        'L1': 18, 'L2': 38, 'H': 30, 'thickness': 5,
         'description': 'Asymmetric + thick: massive one leg'
     })
 
     # 9. Reversed asymmetry (swap L1 and L2)
     geometries.append({
         'name': 'reversed_asym',
-        'L1': 140, 'L2': 50, 'H': 100, 'thickness': 10,
+        'L1': 42, 'L2': 18, 'H': 30, 'thickness': 3,
         'description': 'Reversed: long first leg + short second'
     })
 

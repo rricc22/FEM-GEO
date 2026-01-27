@@ -1,0 +1,54 @@
+_wandb:
+    value:
+        cli_version: 0.22.3
+        e:
+            mdfyv9mqb5t093f5s5q88ym9trt2c7k4:
+                codePath: src/train_pinn.py
+                codePathLocal: src/train_pinn.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1005867986944"
+                        used: "503484342272"
+                email: riccardo.castellano@yahoo.fr
+                executable: /home/riccardo/miniconda3/envs/ai_general/bin/python
+                git:
+                    commit: cf2e4945671700b585ad51e89e87dfcf81346356
+                    remote: git@github.com:rricc22/FEM-GEO.git
+                host: riccardo-ThinkPad-P14s-Gen-5-AMD
+                memory:
+                    total: "29050183680"
+                os: Linux-6.14.0-1019-oem-x86_64-with-glibc2.39
+                program: /home/riccardo/Documents/FEM-GEO/src/train_pinn.py
+                python: CPython 3.10.19
+                root: /home/riccardo/Documents/FEM-GEO
+                startedAt: "2026-01-27T17:17:43.669227Z"
+                writerId: mdfyv9mqb5t093f5s5q88ym9trt2c7k4
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 105
+            "2":
+                - 1
+                - 105
+            "3":
+                - 16
+            "4": 3.10.19
+            "5": 0.22.3
+            "12": 0.22.3
+            "13": linux-x86_64
+alpha:
+    value: 1e-05
+batch_size:
+    value: 512
+epochs:
+    value: 100
+hidden_dim:
+    value: 128
+lambda_physics:
+    value: 0.1
+lr:
+    value: 0.001

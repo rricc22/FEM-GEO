@@ -43,7 +43,7 @@ def train():
     config = {
         'batch_size': 512,
         'lr': 1e-3,
-        'epochs': 100,
+        'epochs': 15,
         'hidden_dim': 128,
         'alpha': 1e-5,
         'lambda_physics': 0.1,

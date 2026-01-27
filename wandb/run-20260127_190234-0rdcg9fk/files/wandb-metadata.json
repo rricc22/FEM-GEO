@@ -1,0 +1,28 @@
+{
+  "os":  "Linux-6.14.0-1019-oem-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-01-27T18:02:34.486223Z",
+  "program":  "/home/riccardo/Documents/FEM-GEO/src/train_pinn.py",
+  "codePath":  "src/train_pinn.py",
+  "codePathLocal":  "src/train_pinn.py",
+  "git":  {
+    "remote":  "git@github.com:rricc22/FEM-GEO.git",
+    "commit":  "cf2e4945671700b585ad51e89e87dfcf81346356"
+  },
+  "email":  "riccardo.castellano@yahoo.fr",
+  "root":  "/home/riccardo/Documents/FEM-GEO",
+  "host":  "riccardo-ThinkPad-P14s-Gen-5-AMD",
+  "executable":  "/home/riccardo/miniconda3/envs/ai_general/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1005867986944",
+      "used":  "503487324160"
+    }
+  },
+  "memory":  {
+    "total":  "29050183680"
+  },
+  "writerId":  "lspzi4ghe5wurnnzg06pkocs4pzdiks3"
+}

@@ -150,7 +150,7 @@ if __name__ == '__main__':
     print(f"Found {len(test_cases)} extrapolation test cases")
 
     # Test on first extrapolation case
-    case_info = test_cases[0]
+    case_info = test_cases[4]
     case_id = case_info['case_id']
     geometry_id = case_info['geometry_id']
     geometry_name = case_info['geometry_name']
