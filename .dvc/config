@@ -1,6 +1,6 @@
 [core]
     remote = storage
 ['remote "storage"']
-    url = webdav://nextcloud.rricc22-homelab.com/remote.php/dav/files/admin/dvc-storage
+    url = webdavs://nextcloud.rricc22-homelab.com/remote.php/dav/files/admin/dvc-storage
     user = admin
     password = Claudio030403**
