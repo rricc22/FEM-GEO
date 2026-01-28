@@ -41,3 +41,9 @@ venv/
 # Elmer result files
 *.result
 /fem_cases
+/saves
+/elmer_mesh
+/pinn_predictions
+/Archives
+/CAD
+/pinn_prediction

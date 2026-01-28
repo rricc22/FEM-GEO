@@ -1,0 +1,5 @@
+outs:
+- md5: 6319c0704bb1038f08569d665ba6d24d
+  size: 210037
+  hash: md5
+  path: pinn_model.pt

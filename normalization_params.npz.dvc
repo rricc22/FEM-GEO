@@ -1,0 +1,5 @@
+outs:
+- md5: c52d2ce94518afa53042b1f8ffbc03ee
+  size: 6322
+  hash: md5
+  path: normalization_params.npz

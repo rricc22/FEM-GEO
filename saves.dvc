@@ -1,0 +1,6 @@
+outs:
+- md5: a1a7722e41387ca898062c0424774df1.dir
+  size: 2915559638
+  nfiles: 3
+  hash: md5
+  path: saves

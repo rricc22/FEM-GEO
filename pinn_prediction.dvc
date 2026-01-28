@@ -1,0 +1,6 @@
+outs:
+- md5: 0d2e1239e97a96c85eadd096a74a4514.dir
+  size: 1307410
+  nfiles: 5
+  hash: md5
+  path: pinn_prediction
