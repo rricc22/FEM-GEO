@@ -1,0 +1,6 @@
+outs:
+- md5: 20deb1307984213f544976036c4abe2c.dir
+  size: 1798189178
+  nfiles: 5321
+  hash: md5
+  path: fem_cases
